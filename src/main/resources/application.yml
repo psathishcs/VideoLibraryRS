@@ -1,0 +1,6 @@
+logging:
+  level:
+    org.video.library.controllers: INFO
+
+server:
+  port: 8087

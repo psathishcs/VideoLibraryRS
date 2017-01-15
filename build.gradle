@@ -40,8 +40,8 @@ repositories {
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-thymeleaf:1.4.0.RELEASE'
 	compile 'org.springframework.data:spring-data-cassandra'
-    compile("io.springfox:springfox-swagger2:2.5.0")
-    compile("io.springfox:springfox-swagger-ui:2.5.0")
+    compile ("io.springfox:springfox-swagger2:2.5.0")
+    compile ("io.springfox:springfox-swagger-ui:2.5.0")  
     compile 'org.slf4j:slf4j-api:1.7.21'
     testCompile 'junit:junit:4.12'
 }

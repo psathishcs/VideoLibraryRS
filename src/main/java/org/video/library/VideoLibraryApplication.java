@@ -10,8 +10,10 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
+@EnableSwagger2
 public class VideoLibraryApplication {
 	public static void main(String[] args){
 		SpringApplication.run(VideoLibraryApplication.class, args);
@@ -20,8 +22,9 @@ public class VideoLibraryApplication {
 	public Docket api() {                
 	    return new Docket(DocumentationType.SWAGGER_2)          
 	      .select()
-	      .apis(RequestHandlerSelectors.basePackage("org.video.library.controller"))
-	      .paths(PathSelectors.ant("/foos/*"))
+	      .apis(RequestHandlerSelectors.basePackage("org.video.library.controllers"))
+	      .paths(PathSelectors.ant("/*"))
+	      .apis(RequestHandlerSelectors.any())
 	      .build()
 	      .apiInfo(apiInfo());
 	}
@@ -32,7 +35,7 @@ public class VideoLibraryApplication {
 	      "Video Library RESTfull API",
 	      "API TOS",
 	      "Terms of service",
-	      new Contact("Sathish Kumar Parthasarathy", "https://github.com/psathishcs", "p.sathish.cs@gmail.com"),
+	       new Contact("Sathish Kumar Parthasarathy", "https://github.com/psathishcs", "p.sathish.cs@gmail.com"),
 	      "License of API",
 	      "API license URL");
 	    return apiInfo;

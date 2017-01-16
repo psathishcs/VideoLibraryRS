@@ -1,8 +1,0 @@
-server:
-  port: 8085
-  contextPath: /videos/api
-
-logging:
-  level:
-    org.orders.controllers: INFO
-    

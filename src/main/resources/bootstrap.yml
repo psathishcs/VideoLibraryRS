@@ -1,11 +1,11 @@
 
-spring: 
-  application: 
-    name: videoLibrary-config-client
-  profiles: 
-    active: dev
-  cloud: 
-    config: 
-      uri: http://localhost:8888
+spring:
+  application:
+    name: videoLibrary-config
+  profiles:
+    active: dockerV3
+  cloud:
+    config:
+      uri: http://cloudconfigservice:8888
       username: root
       password: s3cr3t

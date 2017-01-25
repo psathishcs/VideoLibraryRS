@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: videoLibrary-config
+    name: VideoLibraryRS
   profiles:
     active: dockerV3
   cloud:

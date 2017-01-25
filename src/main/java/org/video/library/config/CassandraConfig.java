@@ -1,5 +1,6 @@
 package org.video.library.config;
 
+import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.config.CassandraClusterFactoryBean;
@@ -12,6 +13,10 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 	@Override
 	protected String getKeyspaceName() {
 		return "helloworld";
+	}
+	@Bean
+	public AlwaysSampler defaultSampler() {
+	  return new AlwaysSampler();
 	}
 
 	@Bean
